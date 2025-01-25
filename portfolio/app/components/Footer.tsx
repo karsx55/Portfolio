@@ -6,7 +6,7 @@ import { Button } from "@heroui/react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-black text-white py-8 mt-[-1%]">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-row mt-[10%] gap-16">
           <Image

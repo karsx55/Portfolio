@@ -66,7 +66,7 @@ const HeroText = () => {
             Hello,
           </h1>
           <h1 id="text-anim" className="text-[500%]" ref={textRef2}>
-            I am Kartik Verma
+            I'm Kartik Verma
           </h1>
           <div className="flex flex-row items-center gap-4  mt-[15%]">
             <div className="flex flex-col justify-center items-center">
