@@ -32,10 +32,10 @@ const Footer: React.FC = () => {
           <h1>kartikvermaaa01@gmail.com</h1>
         </div>
         <div className="flex flex-col justify-center gap-10">
-          <a href="#about" className="text-white hover:underline">
+          <a href="/About" className="text-white hover:underline">
             About
           </a>
-          <a href="#work" className="text-white hover:underline">
+          <a href="/Work" className="text-white hover:underline">
             Work
           </a>
           <a href="#contact" className="text-white hover:underline">

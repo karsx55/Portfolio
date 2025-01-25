@@ -1,8 +1,15 @@
+"use client";
+
 import Header from "./components/Header";
 import HeroText from "./components/HeroText";
 import Footer from "./components/Footer";
 import SectionOne from "./components/SectionOne";
-import SectionTwo from "./components/SectionTwo";
+import Projects from "./components/Projects";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const projects = [
@@ -15,20 +22,36 @@ export default function Home() {
     { name: "TogertherWeCan", link: "#" },
   ];
 
+  const heroRef = useRef(null);
+  const sectionOneRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(heroRef.current, {
+      scrollTrigger: {
+        trigger: sectionOneRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        pin: heroRef.current,
+        pinSpacing: false,
+      },
+    });
+  }, []);
+
   return (
     <div>
       <header>
         <Header />
       </header>
       <main>
-        <section>
+        <section ref={heroRef}>
           <HeroText />
         </section>
-        <section>
+        <section ref={sectionOneRef}>
           <SectionOne />
         </section>
         <section>
-          <SectionTwo projects={projects} />
+          <Projects projects={projects} />
         </section>
       </main>
       <footer>
