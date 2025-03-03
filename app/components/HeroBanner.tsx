@@ -151,6 +151,8 @@ const HeroBanner: React.FC = () => {
         <h4>TENSORFLOW</h4>
         <h4>OPENAPI</h4>
         <h4>LLM</h4>
+        <h4>MACHINE</h4>
+        <h4>LEARNING</h4>
       </div>
     </div>
   );

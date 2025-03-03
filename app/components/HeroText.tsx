@@ -58,8 +58,8 @@ const HeroText = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-row items-center justify-center h-screen">
-        <div>
-          <Image src="/me.png" alt="me" height={1000} width={1000} />
+        <div className="ml-[10%] mb-[5%]">
+          <Image src="/image.webp" alt="me" height={800} width={800} />
         </div>
         <div className="flex flex-col container-hero mt-[-10%]">
           <h1 id="text-anim" className="text-[700%]" ref={textRef1}>
@@ -87,15 +87,21 @@ const HeroText = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 ml-[150]">
+            <a href="https://www.instagram.com/1kartik.verma/" target="_blank" rel="noopener noreferrer">
+            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
+              <Image src="insta.svg" alt="Instagram" height={20} width={20} />
+            </button>
+            </a>
+            <a href="https://www.linkedin.com/in/kartik555" target="_blank" rel="noopener noreferrer">
               <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <Image src="insta.svg" alt="me" height={20} width={20} />
+                <Image src="linkedin.svg" alt="LinkedIn" height={20} width={20} />
               </button>
+            </a>
+            <a href="https://github.com/kartik-555?tab=repositories" target="_blank" rel="noopener noreferrer">
               <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <Image src="linkedin.svg" alt="me" height={20} width={20} />
+                <Image src="github.svg" alt="GitHub" height={20} width={20} />
               </button>
-              <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <Image src="github.svg" alt="me" height={20} width={20} />
-              </button>
+            </a>
             </div>
           </div>
         </div>

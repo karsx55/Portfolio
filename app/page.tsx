@@ -15,11 +15,11 @@ export default function Home() {
   const projects = [
     {
       name: "AI-Powered-Knowledge-Base-Assistant",
-      link: "#",
+      link: "https://github.com/kartik-555/AI-Powered-Knowledge-Base-Assistant",
     },
-    { name: " TimeSeriesAnalysis_LSTM_RNN", link: "#" },
-    { name: "Bloom-Studios", link: "#" },
-    { name: "TogertherWeCan", link: "#" },
+    { name: "TimeSeriesAnalysis_LSTM_RNN", link: "https://github.com/kartik-555/TimeSeriesAnalysis_LSTM_RNN" },
+    { name: "Fake_Account_Detection", link: "https://github.com/kartik-555/Fake_Account_Detection" },
+    { name: "TogertherWeCan", link: "https://github.com/kartik-555/TogertherWeCan" },
   ];
 
   const heroRef = useRef(null);

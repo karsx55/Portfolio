@@ -199,3 +199,7 @@ body {
   transform: scale(1.1);
   color: red;
 }
+
+.navbar-top {
+  z-index: 1000;
+}

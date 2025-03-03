@@ -21,7 +21,7 @@ export const Profile = () => {
 
 export default function Header() {
   return (
-    <Navbar position="static" className=" mt-5">
+    <Navbar position="static" className="navbar-top mt-5">
       <NavbarBrand>
         <Link href="/">
           <Profile />
