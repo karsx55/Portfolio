@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -37,13 +38,13 @@ const HeroBanner: React.FC = () => {
       items = gsap.utils.toArray(items);
       config = config || {};
       let tl = gsap.timeline({
-          repeat: config.repeat,
-          paused: config.paused,
-          defaults: { ease: "none" },
-          onReverseComplete: () => {
-            tl.totalTime(tl.rawTime() + tl.duration() * 100);
-          },
-        }),
+        repeat: config.repeat,
+        paused: config.paused,
+        defaults: { ease: "none" },
+        onReverseComplete: () => {
+          tl.totalTime(tl.rawTime() + tl.duration() * 100);
+        },
+      }),
         length = items.length,
         startX = items[0].offsetLeft,
         times: number[] = [],
@@ -68,7 +69,7 @@ const HeroBanner: React.FC = () => {
           ));
           xPercents[i] = snap(
             (parseFloat(gsap.getProperty(el, "x", "px") as string) / w) * 100 +
-              parseFloat(gsap.getProperty(el, "xPercent") as string)
+            parseFloat(gsap.getProperty(el, "xPercent") as string)
           );
           return xPercents[i];
         },
@@ -79,7 +80,7 @@ const HeroBanner: React.FC = () => {
         (xPercents[length - 1] / 100) * widths[length - 1] -
         startX +
         items[length - 1].offsetWidth *
-          parseFloat(gsap.getProperty(items[length - 1], "scaleX") as string) +
+        parseFloat(gsap.getProperty(items[length - 1], "scaleX") as string) +
         (parseFloat(config.paddingRight) || 0);
       for (i = 0; i < length; i++) {
         item = items[i];
@@ -145,10 +146,10 @@ const HeroBanner: React.FC = () => {
   return (
     <div className="scrolling-text mt-[-10%]" ref={bannerRef}>
       <div className="rail">
-        <h4>DJANGO</h4>
         <h4>FASTAPI</h4>
-        <h4>NEXTJS</h4>
-        <h4>TENSORFLOW</h4>
+        <h4>LANGCHAIN</h4>
+        <h4>RAG</h4>
+        <h4>LANGGRAPH</h4>
         <h4>OPENAPI</h4>
         <h4>LLM</h4>
         <h4>MACHINE</h4>

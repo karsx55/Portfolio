@@ -2,78 +2,58 @@
 
 import React from "react";
 import Image from "next/image";
-import { Button } from "@heroui/react";
+// Button removed
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-8 mt-[-1%]">
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row mt-[10%] gap-16">
+    <footer className="bg-black py-12 border-t border-white/10">
+      <div className="flex flex-col items-center justify-center px-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-10 text-center md:text-left">
           <Image
             src="/profile.png"
             alt="logo"
-            width={200}
-            height={200}
-            className=""
+            width={100}
+            height={100}
+            className="rounded-full border border-white/10"
           />
-          <h1 className="text-[300%]">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Great things can happen with
-            <br /> a simple "hello!"
+            <br /> <span className="text-secondary">a simple &quot;hello!&quot;</span>
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-10">
-        <hr className="my-8 border-t border-gray-200 w-3/4" />
+
+      <div className="flex flex-col items-center justify-center mt-12 w-full">
+        <div className="w-3/4 border-t border-white/10" />
       </div>
-      <div className="flex flex-row items-center justify-center gap-[15%]">
-        <div className="flex flex-col justify-center gap-10">
-          <h1>kartik.</h1>
-          <h1>Sec-127 Mohali, India</h1>
-          <h1>kartikvermaaa01@gmail.com</h1>
+
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-10 md:gap-32 mt-12 px-10 md:px-0 w-full max-w-6xl mx-auto">
+        <div className="flex flex-col gap-2">
+          <h1 className="font-bold text-xl">kartik.</h1>
+          <p className="text-gray-400">Sec-127 Mohali, India</p>
+          <a href="mailto:kartikvermaaa01@gmail.com" className="text-gray-400 hover:text-white transition-colors">kartikvermaaa01@gmail.com</a>
         </div>
-        <div className="flex flex-col justify-center gap-10">
-          <a href="/About" className="text-white hover:underline">
-            About
-          </a>
-          <a href="/Work" className="text-white hover:underline">
-            Work
-          </a>
-          <a href="#contact" className="text-white hover:underline">
-            Contact
-          </a>
+
+        <div className="flex flex-col gap-4">
+          <h2 className="font-bold text-lg text-white/50">Explore</h2>
+          <a href="/Work" className="text-white hover:text-primary transition-colors">Work</a>
+          <a href="/Contact" className="text-white hover:text-primary transition-colors">Contact</a>
         </div>
-        <div className="flex flex-col justify-center gap-10">
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:underline"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:underline"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://www.github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:underline"
-          >
-            GitHub
-          </a>
+
+        <div className="flex flex-col gap-4">
+          <h2 className="font-bold text-lg text-white/50">Socials</h2>
+          <a href="https://www.instagram.com/thecodedox/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/in/kartik555" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-colors">LinkedIn</a>
+          <a href="https://github.com/kartik-555" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-colors">GitHub</a>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-[8%]">
-        <hr className="my-8 border-t border-gray-200 w-3/4" />
+
+      <div className="flex flex-col items-center justify-center mt-16 w-full">
+        <div className="w-3/4 border-t border-white/10" />
       </div>
-      <div className="flex flex-col items-center">
-        <h1>©2025 KARTIK COMPANY. ALL RIGHT RESERVED</h1>
+
+      <div className="flex flex-col items-center mt-8 text-center px-4">
+        <p className="text-sm text-gray-500">© 2026 KARTIK. ALL RIGHT RESERVED</p>
       </div>
     </footer>
   );

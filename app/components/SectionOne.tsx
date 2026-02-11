@@ -36,19 +36,19 @@ const SectionOne: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-black text-white">
-      <div className="text-[300%] font-bold text-center" ref={textRef}>
-        <div className="mb-4">
-          Creating impactful products by blending user insights,
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground px-4 relative z-10">
+      <div className="text-2xl md:text-6xl font-bold text-center leading-tight max-w-5xl" ref={textRef}>
+        <div className="mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50">
+          Building scalable AI automation systems by blending Voice AI Agents,
         </div>
-        <div className="mb-4">
-          machine learning, LLM integration, chatbot development,
+        <div className="mb-4 text-white/90">
+          LLM-based AI solutions, and backend expertise using FastAPI,
         </div>
-        <div className="mb-4">
-          and backend expertise using Django, TensorFlow,
+        <div className="mb-4 text-white/80">
+          Langgraph, Langchain and Azure. Specialized in creating data-driven,
         </div>
-        <div className="mb-4">
-          and PyTorch for innovative, data-driven solutions.
+        <div className="mb-4 text-white/70">
+          autonomous solutions that optimize efficiency and drive innovation.
         </div>
       </div>
     </div>

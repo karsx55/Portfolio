@@ -5,57 +5,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Dark Mode Default Variables */
+  --background: #0a0a0a;
+  --foreground: #ededed;
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+  /* Accent Colors */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  --secondary: #a855f7;
+  --secondary-foreground: #ffffff;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Manrope', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
+/* Custom Utilities */
 .container-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  position: relative;
+  @apply flex flex-col items-center justify-center w-full min-h-screen relative;
 }
 
 .instock-pulse {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
+  @apply flex flex-wrap items-center;
 }
 
 .icon--pulsing {
-  position: relative;
-  width: 20px;
-  height: 20px;
+  @apply relative w-5 h-5;
 }
 
 .icon--pulsing:after,
 .icon--pulsing:before {
-  background: #54c63a;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  margin: 5px;
+  @apply absolute left-0 top-0 w-2.5 h-2.5 rounded-full bg-[#54c63a] m-[5px] content-[''];
+}
+
+.icon--pulsing:before {
+  @apply animate-[inventory-pulse_2s_linear_infinite];
 }
 
 @keyframes inventory-pulse {
@@ -69,137 +59,72 @@ body {
   }
 }
 
-.icon--pulsing:before {
-  animation: inventory-pulse 2s linear infinite;
-}
-
 .scrolling-text {
-  overflow: hidden;
-  width: 100%;
-  height: 8vh;
-  display: flex;
-  align-items: center;
-  background-color: black;
+  @apply overflow-hidden w-full h-[8vh] flex items-center bg-black;
 }
 
 .scrolling-text .rail {
-  display: flex;
+  @apply flex;
 }
 
 .scrolling-text .rail h4 {
-  white-space: nowrap;
-  letter-spacing: 30px;
-  line-height: 1em;
-  margin: 0 1rem 0 0;
-  color: white;
+  @apply whitespace-nowrap tracking-[30px] leading-none m-0 mr-4 text-white;
 }
 
+/* Modern Card Styles with Glassmorphism */
 .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  z-index: 1;
+  @apply relative flex justify-center items-center flex-wrap z-10 max-w-[1200px] w-full p-4 gap-8;
 }
 
 .container .card {
-  position: relative;
-  width: 280px;
-  height: 450px;
-  margin: 30px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  cursor: pointer;
+  @apply relative w-[280px] h-[450px] rounded-2xl overflow-hidden flex justify-center items-center cursor-pointer transition-all duration-500 ease-out;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .container .card .content {
-  padding: 20px;
-  text-align: center;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.container .card .preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: all 0.6s;
-}
-
-.preview h4 {
-  color: #fff;
-  font-size: 22px;
-}
-
-.container .card:hover .preview {
-  transform: translateY(-100%);
-  opacity: 0;
+  @apply p-5 text-center opacity-0 translate-y-[100px] transition-all duration-500;
 }
 
 .container .card:hover .content {
-  transform: translateY(0px);
-  opacity: 1;
+  @apply opacity-100 translate-y-0;
+}
+
+.container .card .preview {
+  @apply absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-100 transition-all duration-500 z-10;
+}
+
+.container .card:hover .preview {
+  @apply translate-y-[-100%] opacity-0;
+}
+
+.preview h4 {
+  @apply text-white text-2xl font-bold;
 }
 
 .container .card .content h2 {
-  position: absolute;
-  top: -80px;
-  right: 30px;
-  font-size: 6em;
-  color: rgba(255, 255, 255, 0.05);
-  pointer-events: none;
+  @apply absolute -top-20 -right-8 text-8xl text-white/5 pointer-events-none font-bold;
 }
 
 .container .card .content h3 {
-  font-size: 1.8em;
-  color: #fff;
-  z-index: 1;
-  letter-spacing: 2px;
+  @apply text-2xl text-white z-10 tracking-widest mb-2 font-bold;
 }
 
 .container .card .content p {
-  font-size: 1em;
-  color: #fff;
-  font-weight: 300;
+  @apply text-base text-gray-300 font-light;
 }
 
 .container .card .content a {
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  margin-top: 20px;
-  text-decoration: none;
-  background: #fff;
-  color: #000;
-  border-radius: 20px;
-  transition: transform 0.2s;
-  font-weight: 600;
-  letter-spacing: 1.1px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  @apply relative inline-block px-6 py-2 mt-5 bg-white text-black rounded-full font-semibold tracking-wide transition-all duration-300 shadow-lg no-underline;
 }
 
 .container .card .content a:hover {
-  transform: scale(1.1);
-  color: red;
+  @apply scale-105 text-primary bg-gray-100;
 }
 
 .navbar-top {
-  z-index: 1000;
+  @apply z-50 sticky top-0 backdrop-blur-md bg-black/50;
 }

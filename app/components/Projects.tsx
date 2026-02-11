@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@heroui/react";
 
 interface Project {
@@ -18,7 +19,7 @@ export default function Project({ projects }: PageProps) {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    projectRefs.current.forEach((projectRef, index) => {
+    projectRefs.current.forEach((projectRef) => {
       if (projectRef) {
         gsap.fromTo(
           projectRef,
@@ -47,65 +48,52 @@ export default function Project({ projects }: PageProps) {
   }, [projects]);
 
   return (
-    <div className="relative">
-      <div className="flex flex-col items-center justify-center h-screen bg-white text-black gap-10">
+    <div className="relative w-full">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8 md:gap-12 py-10 md:py-20 px-4">
         <div className="flex items-center justify-center">
-          <h1 className="text-[150%] font-bold text-gray-600">Recent Work</h1>
+          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Recent Work</h1>
         </div>
-        <hr className="border-t-2 border-black w-[50%]" />
-        <div className="flex flex-col gap-8">
+
+
+        <div className="flex flex-col gap-8 w-full max-w-4xl">
           {projects.map((project, index) => (
             <React.Fragment key={index}>
               <div
                 ref={(el) => {
                   projectRefs.current[index] = el;
                 }}
-                className="flex justify-between w-[110%] items-center"
+                className="flex justify-between w-full items-center p-4 rounded-xl hover:bg-white/5 transition-all duration-300 group cursor-pointer"
               >
-                <h2 className="text-[150%] font-bold text-black">
-                  {project.name}
+                <h2 className="text-lg md:text-4xl font-bold text-white group-hover:text-primary transition-colors">
+                  {project.name.replace(/-/g, " ")}
                 </h2>
                 <a
                   href={project.link}
-                  className="rounded-full p-2 bg-gray-500 hover:bg-black transition duration-200"
+                  className="rounded-full p-3 bg-white/10 hover:bg-primary hover:text-white transition-all duration-300 transform group-hover:rotate-45"
                 >
                   <Image
                     src="arrow.svg"
                     alt="arrow"
-                    style={{ transform: "rotate(270deg)" }}
-                    height={25}
-                    width={25}
+                    className="invert"
+                    height={24}
+                    width={24}
                   />
                 </a>
               </div>
-              <hr className="border-t-2 border-gray-200 w-[110%]" />
+              <div className="w-full border-t border-white/5" />
             </React.Fragment>
           ))}
         </div>
-        <Button
-          color="primary"
-          variant="bordered"
-          className="border-2 border-black px-4 py-2 rounded-md md:px-6 md:py-3 hover:bg-black hover:text-white transition duration-200"
-        >
-          More Work
-        </Button>
-      </div>
-      <div
-        className="svgContainer"
-        style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}
-      >
-        <svg
-          style={{ width: "100%, height: 100%" }}
-          viewBox="0 0 1440 137"
-          preserveAspectRatio="none"
-          width="100%"
-          height="100%"
-        >
-          <path
-            d="M0,0 C480,120 960,120 1440,0 L1440,137 L0,137 Z"
-            fill="black"
-          />
-        </svg>
+
+        <Link href="/Work">
+          <Button
+            color="primary"
+            variant="shadow"
+            className="px-8 py-6 text-lg font-bold rounded-full mt-10"
+          >
+            More Work
+          </Button>
+        </Link>
       </div>
     </div>
   );
