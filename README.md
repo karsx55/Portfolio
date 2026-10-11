@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Kartik Dispatch
 
-## Getting Started
+Kartik Verma’s portfolio, designed as an independent engineering newspaper. Built with Next.js, React, TypeScript, and locally hosted fonts.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. For a production build, run `npm run build` followed by `npm start`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content and design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/data.ts`: project links, descriptions, contact details, and toolkit entries.
+- `app/components/Portfolio.tsx`: the masthead, cover story, project dossiers, biography, toolkit, career record, and contact form.
+- `app/globals.css`: paper texture, editorial typography, responsive layouts, day/night editions, and reduced-motion behavior.
+- `app/fonts/`: locally hosted fonts and their licenses; no font network request is needed to build or view the site.
+- `public/resume.html`: printable résumé source.
+- `public/Kartik_verma_resume.pdf`: downloadable résumé, rebuilt from the original portfolio’s résumé content because its original PDF was corrupt.
 
-## Learn More
+The home page includes the complete portfolio. `/Work`, `/Resume`, and `/Contact` provide dedicated editions. Projects can be filtered and opened in keyboard-accessible native dialogs. The day/night preference is stored locally.
 
-To learn more about Next.js, take a look at the following resources:
+The contact form validates the fields and opens a prefilled draft in the visitor’s email app. It does not send mail through a server. Email, phone, social links, and an email-copy button also work directly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To regenerate the PDF on a system with Chromium installed:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+chromium --headless --no-pdf-header-footer --print-to-pdf="$PWD/public/Kartik_verma_resume.pdf" "file://$PWD/public/resume.html"
+```
 
-## Deploy on Vercel
+## Verification
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The production build and TypeScript checks pass. Browser checks covered all four routes, project filters, dossier opening/closing, Escape and focus restoration, toolkit selection, persistent day/night mode, clipboard copying, contact draft preparation, and layouts at 320, 375, 390, 600, 768, 1024, and 1440 pixels.

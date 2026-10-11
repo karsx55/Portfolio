@@ -1,35 +1,51 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import SmoothScrolling from "./components/useLenis";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const editorial = localFont({
+  src: [
+    { path: "./fonts/fraunces-regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/fraunces-bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/fraunces-italic.ttf", weight: "500", style: "italic" },
+  ],
+  variable: "--font-editorial",
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sans = localFont({
+  src: [
+    { path: "./fonts/dm-sans.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/dm-sans-semibold.ttf", weight: "600", style: "normal" },
+  ],
+  variable: "--font-sans",
+  display: "swap",
+});
+const mono = localFont({
+  src: "./fonts/plex-mono.ttf",
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "kartik.",
-  description: "Freelance Developer",
+  title: "The Kartik Dispatch — AI & Backend Engineer",
+  description:
+    "The personal dispatch of Kartik Verma. Explore AI agents, voice systems, retrieval pipelines, and the backend engineering behind them.",
+  openGraph: {
+    title: "The Kartik Dispatch — Kartik Verma",
+    description:
+      "Intelligent systems. Thoughtfully engineered. The work and notes of an AI & backend engineer.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${editorial.variable} ${sans.variable} ${mono.variable}`}
       >
-        <SmoothScrolling>{children}</SmoothScrolling>
+        {children}
       </body>
     </html>
   );

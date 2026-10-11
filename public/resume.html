@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kartik Verma — Résumé</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 15mm 17mm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        color: #252721;
+        max-width: 780px;
+        margin: 35px auto;
+        font-size: 10pt;
+        line-height: 1.4;
+        padding: 0 20px;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1 {
+        font:
+          700 33pt Georgia,
+          serif;
+        letter-spacing: -1.2px;
+      }
+      h2 {
+        font:
+          700 13pt Georgia,
+          serif;
+        margin: 14px 0 8px;
+        border-bottom: 1px solid #bfc1b8;
+        padding-bottom: 4px;
+      }
+      h3 {
+        font-size: 10pt;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .role {
+        color: #a63623;
+        font-size: 12pt;
+        margin: 4px 0 9px;
+      }
+      .contact {
+        font-size: 8.4pt;
+        padding-bottom: 14px;
+        border-bottom: 3px solid #252721;
+        line-height: 1.8;
+      }
+      .summary {
+        margin-top: 15px;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 22px;
+      }
+      .skills p {
+        font-size: 9pt;
+      }
+      .skills strong {
+        display: block;
+        font-size: 9pt;
+      }
+      article {
+        margin-bottom: 13px;
+        break-inside: avoid;
+      }
+      .job-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+      }
+      .date {
+        font-size: 8pt;
+        white-space: nowrap;
+        color: #5e6358;
+      }
+      .company {
+        font-size: 9pt;
+        margin-top: 2px;
+        color: #a63623;
+      }
+      ul {
+        padding-left: 16px;
+        margin: 7px 0 0;
+        font-size: 9pt;
+      }
+      li {
+        margin: 3px 0;
+      }
+      .small {
+        font-size: 9pt;
+      }
+      .cert {
+        font-size: 9pt;
+        margin: 4px 0;
+      }
+      .footer {
+        font-size: 8pt;
+        color: #686a60;
+        margin-top: 17px;
+        border-top: 1px solid #bfc1b8;
+        padding-top: 7px;
+      }
+      @media print {
+        body {
+          padding: 0;
+          margin: 0;
+          max-width: none;
+        }
+      }
+      @media (max-width: 600px) {
+        .skills {
+          grid-template-columns: 1fr;
+        }
+        .job-heading {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Kartik Verma</h1>
+      <p class="role">AI Solution & Backend Developer</p>
+      <p class="contact">
+        <a href="mailto:kartikvermaaa01@gmail.com">kartikvermaaa01@gmail.com</a>
+        · <a href="tel:+917417193304">+91 74171 93304</a> · India<br /><a
+          href="https://github.com/kartik-555"
+          >github.com/kartik-555</a
+        >
+        ·
+        <a href="https://www.linkedin.com/in/kartik555"
+          >linkedin.com/in/kartik555</a
+        >
+      </p>
+    </header>
+    <p class="summary">
+      AI solution and backend developer building AI systems with Python,
+      FastAPI, Azure, and language models. Focused on agentic workflows,
+      retrieval-augmented generation, and cloud-native backend architectures,
+      with experience in AI-driven interview and automation platforms.
+    </p>
+    <section>
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <p>
+          <strong>Languages & backend</strong>Python, JavaScript, HTML, CSS,
+          FastAPI, Django, Django REST Framework
+        </p>
+        <p>
+          <strong>LLMs & agents</strong>LangChain, LangGraph, OpenAI API,
+          Hugging Face Transformers, RAG, prompt engineering
+        </p>
+        <p>
+          <strong>Machine learning</strong>TensorFlow, Keras, PyTorch,
+          Scikit-learn, YOLO, OpenCV
+        </p>
+        <p>
+          <strong>Cloud & infrastructure</strong>Azure Service Bus, Azure Blob
+          Storage, Docker, Git
+        </p>
+        <p>
+          <strong>Retrieval & databases</strong>FAISS, vector search, MongoDB,
+          PostgreSQL
+        </p>
+        <p>
+          <strong>Data</strong>NumPy, Pandas, data preprocessing, time-series
+          analysis
+        </p>
+      </div>
+    </section>
+    <section>
+      <h2>Professional experience</h2>
+      <article>
+        <div class="job-heading">
+          <h3>Full-Stack Backend / AI Engineer</h3>
+          <span class="date">April 2025 – Present</span>
+        </div>
+        <p class="company">Athmick.ai · Remote</p>
+        <ul>
+          <li>
+            Developed AI-driven interview platforms using FastAPI and agentic
+            workflows powered by LangChain and LangGraph.
+          </li>
+          <li>
+            Built LLM-based agents with multi-step reasoning, tool usage, memory
+            handling, and dynamic prompt orchestration.
+          </li>
+          <li>
+            Implemented RAG pipelines including document ingestion, chunking,
+            embeddings, and vector-based retrieval.
+          </li>
+          <li>
+            Integrated Azure Service Bus, Blob Storage, and secure secret
+            management; optimized prompts, execution flows, and response
+            latency.
+          </li>
+          <li>
+            Collaborated with product and frontend teams to translate
+            requirements into reliable backend services.
+          </li>
+        </ul>
+      </article>
+      <article>
+        <div class="job-heading">
+          <h3>Junior Python Developer</h3>
+          <span class="date">July 2024 – December 2024</span>
+        </div>
+        <p class="company">Spark Brains Pvt. Ltd. · Chandigarh</p>
+        <ul>
+          <li>
+            Developed backend systems using Django, FastAPI, PostgreSQL, and
+            Django REST Framework.
+          </li>
+          <li>
+            Delivered projects including an Employee Management System and the
+            FNTX Trading Platform.
+          </li>
+          <li>
+            Applied transfer learning, time-series forecasting, and object
+            detection with TensorFlow, Keras, and YOLO.
+          </li>
+          <li>
+            Worked with modular architecture, clean code practices, and REST API
+            design.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Selected projects</h2>
+      <p class="small">
+        <a href="https://github.com/kartik-555/AI_receptionist"
+          >AI Receptionist</a
+        >
+        ·
+        <a href="https://github.com/kartik-555/FastAgent-WS"
+          >WebSocket Conversation</a
+        >
+        ·
+        <a
+          href="https://github.com/kartik-555/AI-Powered-Knowledge-Base-Assistant"
+          >AI Knowledge Base Assistant</a
+        >
+        ·
+        <a href="https://github.com/kartik-555/TimeSeriesAnalysis_LSTM_RNN"
+          >Time-Series Analysis (LSTM / RNN)</a
+        >
+        ·
+        <a href="https://github.com/kartik-555/Fake_Account_Detection"
+          >Fake Account Detection</a
+        >
+      </p>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="job-heading">
+        <h3>B.E. in Computer Science & Engineering</h3>
+        <span class="date">May 2024</span>
+      </div>
+      <p class="small">Chandigarh University, Mohali · CGPA: 7.75 / 10</p>
+    </section>
+    <section>
+      <h2>Certifications</h2>
+      <p class="cert">Machine Learning — Coursera / Stanford University</p>
+      <p class="cert">
+        Introduction to TensorFlow for AI, ML, and Deep Learning —
+        DeepLearning.AI
+      </p>
+    </section>
+  </body>
+</html>
