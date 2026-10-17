@@ -26,11 +26,11 @@ const mono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Kartik Dispatch — AI & Backend Engineer",
+  title: "Kartik Dev Works — AI & Backend Engineer",
   description:
-    "The personal dispatch of Kartik Verma. Explore AI agents, voice systems, retrieval pipelines, and the backend engineering behind them.",
+    "The portfolio of Kartik Verma. Explore AI agents, voice systems, retrieval pipelines, and the backend engineering behind them.",
   openGraph: {
-    title: "The Kartik Dispatch — Kartik Verma",
+    title: "Kartik Dev Works — Kartik Verma",
     description:
       "Intelligent systems. Thoughtfully engineered. The work and notes of an AI & backend engineer.",
     type: "website",

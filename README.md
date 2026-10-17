@@ -1,4 +1,4 @@
-# The Kartik Dispatch
+# Kartik Dev Works
 
 Kartik Verma’s portfolio, designed as an independent engineering newspaper. Built with Next.js, React, TypeScript, and locally hosted fonts.
 

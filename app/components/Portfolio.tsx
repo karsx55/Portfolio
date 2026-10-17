@@ -79,8 +79,8 @@ function Masthead({ edition }: { edition: Edition }) {
           <br />
           BUILT WITH INTENT
         </span>
-        <Link href="/" aria-label="The Kartik Dispatch, home">
-          <span className="masthead-the">The</span> Kartik Dispatch
+        <Link href="/" aria-label="Kartik Dev Works, home">
+          Kartik Dev Works
           <span className="masthead-dot">.</span>
         </Link>
         <span className="masthead-side mono masthead-right">
@@ -864,7 +864,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-name">
-        The Kartik Dispatch<span>.</span>
+        Kartik Dev Works<span>.</span>
       </div>
       <div className="footer-bottom mono">
         <span>

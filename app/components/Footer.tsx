@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-xl">kartik.</h1>
           <p className="text-gray-400">Sec-127 Mohali, India</p>
-          <a href="mailto:kartikvermaaa01@gmail.com" className="text-gray-400 hover:text-white transition-colors">kartikvermaaa01@gmail.com</a>
+          <a href="mailto:kartik.dev.works@gmail.com" className="text-gray-400 hover:text-white transition-colors">kartik.dev.works@gmail.com</a>
         </div>
 
         <div className="flex flex-col gap-4">
