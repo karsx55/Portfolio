@@ -17,6 +17,7 @@ Open http://localhost:3000. For a production build, run `npm run build` followed
 - `app/components/Portfolio.tsx`: the masthead, cover story, project dossiers, biography, toolkit, career record, and contact form.
 - `app/globals.css`: paper texture, editorial typography, responsive layouts, day/night editions, and reduced-motion behavior.
 - `app/fonts/`: locally hosted fonts and their licenses; no font network request is needed to build or view the site.
+- `public/kdw-logo.svg`: the reusable KDW logo. `app/icon.png`, `app/favicon.ico`, and `app/apple-icon.png` provide browser and Apple touch icons.
 - `public/resume.html`: printable résumé source.
 - `public/Kartik_verma_resume.pdf`: downloadable résumé, rebuilt from the original portfolio’s résumé content because its original PDF was corrupt.
 

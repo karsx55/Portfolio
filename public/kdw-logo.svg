@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">KDW — Kartik Dev Works</title>
+  <desc id="desc">A cream KDW monogram on an ink square with a vermilion underline.</desc>
+  <rect width="64" height="64" rx="12" fill="#252721"/>
+  <g fill="#f3efe5">
+    <path d="M5 21h4v8l7-8h5l-9 10 9 11h-5l-7-9v9H5Z"/>
+    <path fill-rule="evenodd" d="M23 21h5c6 0 10 4 10 10.5S34 42 28 42h-5Zm4 4v13h1c4 0 6-2.5 6-6.5S32 25 28 25Z"/>
+    <path d="M39 21h4l3 14 3-11h4l3 11 3-14h4l-5 21h-4l-3-11-3 11h-4Z" transform="translate(-1) scale(.97 1)"/>
+  </g>
+  <rect x="6" y="48" width="52" height="3" rx="1.5" fill="#b93c25"/>
+</svg>
